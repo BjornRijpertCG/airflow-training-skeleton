@@ -23,7 +23,7 @@ from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleC
 args = {"owner": "Bjorn_Rijpert", "start_date": "2019-09-20"}
 
 dag = DAG( 
-  dag_id="exercise3", 
+  dag_id="exercise4", 
    default_args=args, 
    start_date=datetime.today(),
    schedule_interval="@daily",
