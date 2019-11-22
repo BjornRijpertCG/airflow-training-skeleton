@@ -41,12 +41,12 @@ branching = BranchPythonOperator(
   task_id="branching", 
   python_callable=_get_weekday, 
   provide_context=True, 
-  dag=dag
+  dag=dag,
 )
 
 dummyTask = DummyOperator(
   task_id="end", 
-  dag=dag
+  dag=dag,
 
 )
 
