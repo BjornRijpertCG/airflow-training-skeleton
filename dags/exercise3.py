@@ -46,7 +46,7 @@ branching = BranchPythonOperator(
 
 dummyTask = DummyOperator(
   task_id="end", 
-  dag=dag,
+  dag=dag
 
 )
 
