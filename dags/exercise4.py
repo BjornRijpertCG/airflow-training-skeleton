@@ -24,8 +24,7 @@ args = {"owner": "Bjorn_Rijpert", "start_date": datetime(2019,9,20)}
 
 dag = DAG( 
   dag_id="exercise4", 
-   default_args=args, 
-   start_date=datetime.today(),
+   default_args=args,
    schedule_interval="@daily",
 )
 
