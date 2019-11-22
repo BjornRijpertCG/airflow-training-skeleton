@@ -19,7 +19,7 @@ from airflow.hooks.postgres_hook import PostgresHook
 from airflow.utils.decorators import apply_defaults
 from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
 
-from airflow.operators import HttpToGcsOperator
+from airflow.contrib.operators.https_to_gcs_operator import HttpToGcsOperator
 
 
 args = {"owner": "Bjorn_Rijpert", "start_date": datetime(2019,9,20)}
