@@ -20,7 +20,7 @@ from airflow.utils.decorators import apply_defaults
 from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
 
 
-args = {"owner": "Bjorn_Rijpert", "start_date": "2019-09-20"}
+args = {"owner": "Bjorn_Rijpert", "start_date": datetime(2019,9,20)}
 
 dag = DAG( 
   dag_id="exercise4", 
