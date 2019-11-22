@@ -4,6 +4,8 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.dummy_operator import DummyOperator 
 from airflow.operators.python_operator import PythonOperator
 
+from datetime import datetime
+
 args = {"owner": "Bjorn_Rijpert", "start_date": airflow.utils.dates.days_ago(14)}
 
 dag = DAG( 
