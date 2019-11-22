@@ -34,7 +34,7 @@ weekday_person_to_email = {
       "Fri": "Alice", # Friday 
       "Sat": "Alice", # Saturday 
       "Sun": "Alice", # Sunday
-  } for name in set(weekday_person_to_email.values):
+  } for name in set(weekday_person_to_email.values()):
          branching >> DummyOperator(task_id=name, dag=dag) 
 
 branching = BranchPythonOperator(
