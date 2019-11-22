@@ -14,7 +14,7 @@ dag = DAG(
 
 t1 = PythonOperator( 
   task_id="print_date", 
-  bash_command="date", 
+  python_callable="date", 
   dag=dag,
 )
 
