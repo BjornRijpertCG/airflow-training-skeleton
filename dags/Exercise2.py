@@ -11,7 +11,7 @@ args = {"owner": "Bjorn_Rijpert", "start_date": airflow.utils.dates.days_ago(14)
 dag = DAG( 
   dag_id="exercise2", 
    default_args=args, 
-   start_date="2019-11-17"
+   start_date="2019-11-17",
    schedule_interval="@daily",
 )
 
