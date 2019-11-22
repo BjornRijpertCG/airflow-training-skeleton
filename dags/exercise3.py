@@ -27,15 +27,15 @@ printweekday = PythonOperator(
 ) 
 
 weekday_person_to_email = {
-      "Mon": "Bob",   #Monday
-      "Tue": "Joe",   #Tuesday
-      "Wed": "Alice", #Wednesday
-      "Thu": "Joe",   #Thursday
+      "Mon": "Bob",   # Monday
+      "Tue": "Joe",   # Tuesday
+      "Wed": "Alice", # Wednesday
+      "Thu": "Joe",   # Thursday
       "Fri": "Alice", # Friday 
       "Sat": "Alice", # Saturday 
       "Sun": "Alice", # Sunday
-  } for day in weekday_person_to_email.keys:
-      branching >> DummyOperator(task_id=day, dag=dag)  
+  } for name in set(weekday_person_to_email.values):
+         branching >> DummyOperator(task_id=name, dag=dag) 
 
 branching = BranchPythonOperator(
   task_id="branching", 
