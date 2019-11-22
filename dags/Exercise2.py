@@ -12,7 +12,7 @@ dag = DAG(
   dag_id="exercise2", 
    default_args=args, 
    start_date=datetime.today(),
-   schedule_interval=@daily,
+   schedule_interval="@daily",
 )
 
 def _current_date():
