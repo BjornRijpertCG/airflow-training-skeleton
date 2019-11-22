@@ -16,7 +16,7 @@ dag = DAG(
 )
 
 def _current_date():
-    print(date.today())
+    print(datetime.today())
 
 t1 = PythonOperator( 
   task_id="print_date", 
