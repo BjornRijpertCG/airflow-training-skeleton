@@ -6,7 +6,7 @@ from airflow.operators.python_operator import PythonOperator
 
 from datetime import datetime
 
-args = {"owner": "Bjorn_Rijpert", "start_date": airflow.utils.dates.days_ago(14)}
+args = {"owner": "Bjorn_Rijpert", "start_date": airflow.utils.dates.days_ago(5)}
 
 dag = DAG( 
   dag_id="exercise2", 
