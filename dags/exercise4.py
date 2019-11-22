@@ -14,9 +14,11 @@ import time
 
 import sys
 
+
 from airflow.hooks.postgres_hook import PostgresHook
 from airflow.utils.decorators import apply_defaults
-from airflow.contrib.operators.sql_to_gcs import BaseSQLToGoogleCloudStorageOperator
+
+import BaseSQLToGoogleCloudStorageOperator
 
 args = {"owner": "Bjorn_Rijpert", "start_date": "2019-09-20"}
 
