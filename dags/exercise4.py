@@ -46,7 +46,7 @@ get_data = PostgresToGoogleCloudStorageOperator(
 
 get_exchange_rate = HttpToGcsOperator (
   task_id = "get_exchange",
-  endpoint = "/history?start_at={{yester_ds}}&end_at={{ds}}&symbols={currency}&base=EUR",
+  endpoint = "/history?start_at={{yester_ds}}&end_at={{ds}}&symbols={currency}&base=GBP",
   gcs_bucket="airflow-training-data2",
   gcs_path="currency/{{ ds }}-" + currency + ".json",  
   http_conn_id="airflow-training-currency-http",
