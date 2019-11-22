@@ -11,12 +11,16 @@ args = {"owner": "Bjorn_Rijpert", "start_date": airflow.utils.dates.days_ago(14)
 dag = DAG( 
   dag_id="exercise2", 
    default_args=args, 
-   schedule_interval="@once",
+   start_date="2019-11-17"
+   schedule_interval="@daily",
 )
+
+def _current_date():
+    print(date.today())
 
 t1 = PythonOperator( 
   task_id="print_date", 
-  python_callable=_check_date, 
+  python_callable=_current_date, 
   dag=dag,
 )
 
