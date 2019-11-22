@@ -16,7 +16,7 @@ dag = DAG(
 
 t1 = PythonOperator( 
   task_id="print_date", 
-  python_callable="date", 
+  python_callable=_print_exec_date, 
   dag=dag,
 )
 
