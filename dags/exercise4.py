@@ -19,7 +19,7 @@ from airflow.hooks.postgres_hook import PostgresHook
 from airflow.utils.decorators import apply_defaults
 from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
 
-from airflow_training.operators import HttpToGcsOperator
+from airflow.operators import HttpToGcsOperator
 
 
 args = {"owner": "Bjorn_Rijpert", "start_date": datetime(2019,9,20)}
@@ -44,7 +44,7 @@ get_data = PostgresToGoogleCloudStorageOperator(
   dag=dag,
 )
 
-get_exchange_rate (
+get_exchange_rate = HttpToGcsOperator (
   task_id = "get_exchange",
   endpoint = f"/history?start_at={{ds}}&end_at={{datetime.today()}}&symbols={currency}&base=EUR",
   gcs_bucket="airflow-training-data2",
