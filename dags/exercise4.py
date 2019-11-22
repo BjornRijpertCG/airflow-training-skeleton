@@ -29,7 +29,7 @@ dag = DAG(
 
 start = DummyOperator(
   task_id="start", 
-  dag=dag
+  dag=dag,
 
 )
 
